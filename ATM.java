@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ATM {
     private static double balance = 0;
-    private static int pin = 1234;
+    private static int pin = 9218;
     private static int attemptsLeft = 3;
 
     public static void main(String[] args) {
@@ -54,42 +54,42 @@ public class ATM {
                     changePin(input);
                     break;
                 case 5:
-                    System.out.println("Thank you for using the ATM Simulator System.");
+                    System.out.println("thank you for using the ATM Simulator System.");
                     return;
                 default:
-                    System.out.println("Invalid choice.");
+                    System.out.println("invalid choice.");
                     break;
             }
         }
     }
 
     private static void deposit(Scanner input) {
-        System.out.print("Enter amount to deposit: ");
+        System.out.print("enter amount to deposit: ");
         double amount = input.nextDouble();
         balance += amount;
-        System.out.println("Deposit successful. Current balance is $" + balance);
+        System.out.println("deposit successful. Current balance is $" + balance);
     }
 
     private static void withdraw(Scanner input) {
-        System.out.print("Enter amount to withdraw: ");
+        System.out.print("enter amount to withdraw: ");
         double amount = input.nextDouble();
 
         if (amount > balance) {
-            System.out.println("Insufficient funds.");
+            System.out.println("insufficient funds.");
         } else {
             balance -= amount;
-            System.out.println("Withdrawal successful. Current balance is $" + balance);
+            System.out.println("withdrawal successful. current balance is $" + balance);
         }
     }
 
     private static void checkBalance() {
-        System.out.println("Current balance is $" + balance);
+        System.out.println("current balance is $" + balance);
     }
 
     private static void changePin(Scanner input) {
-        System.out.print("Enter new PIN: ");
+        System.out.print("enter new PIN: ");
         int newPin = input.nextInt();
-        System.out.print("Confirm new PIN: ");
+        System.out.print("confirm new PIN: ");
         int confirmedPin = input.nextInt();
 
         if (newPin == confirmedPin) {
